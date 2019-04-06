@@ -79,7 +79,7 @@ SELECT COUNT(*) FROM inventory
             WHERE title = 'Hunchback Impossible'
             );
 	-- Using the tables payment and customer and the JOIN command, list the total paid by each customer. List the customers alphabetically by last name:
-SELECT customer.customer_id, customer.last_name, SUM(payment.amount)
+SELECT customer.customer_id, customer.first_name, customer.last_name, SUM(payment.amount)
 	FROM customer
 		JOIN payment
         ON customer.customer_id = payment.customer_id
